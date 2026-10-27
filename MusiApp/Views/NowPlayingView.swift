@@ -51,7 +51,7 @@ struct NowPlayingView: View {
                     Text(time(player.progress))
                     Spacer()
                     Text(time(player.duration))
-                }.font(.system(size: 11, monospacedDigit: true)).foregroundStyle(MusiTheme.secondary)
+                }.font(.system(size: 11, design: .monospaced)).foregroundStyle(MusiTheme.secondary)
             }
 
             HStack(spacing: 36) {
