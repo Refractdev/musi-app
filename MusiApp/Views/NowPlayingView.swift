@@ -16,7 +16,7 @@ struct NowPlayingView: View {
                                            description: Text("Choose a playable track from Search or your Library."))
                 }
             }
-            .background(LinearGradient(colors: [Color(red: 0.14, green: 0.18, blue: 0.17), MusiTheme.background], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea())
+            .background(LinearGradient(colors: [MusiTheme.accent.opacity(0.24), MusiTheme.background, MusiTheme.background], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) { Button("Done") { dismiss() } }
                 ToolbarItem(placement: .topBarTrailing) { Button { showingQueue = true } label: { Image(systemName: "text.line.first.and.arrowtriangle.forward") }.accessibilityLabel("Open queue") }

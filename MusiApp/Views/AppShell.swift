@@ -1,14 +1,14 @@
 import SwiftUI
 
 private enum AppTab: String, CaseIterable {
-    case home = "Home"
+    case home = "Listen Now"
     case search = "Search"
     case library = "Library"
     case settings = "Settings"
 
     var symbol: String {
         switch self {
-        case .home: "house.fill"
+        case .home: "play.circle.fill"
         case .search: "magnifyingglass"
         case .library: "square.stack.fill"
         case .settings: "slider.horizontal.3"

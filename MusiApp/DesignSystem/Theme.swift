@@ -1,9 +1,9 @@
 import SwiftUI
 
 enum MusiTheme {
-    static let background = Color(red: 0.035, green: 0.045, blue: 0.065)
-    static let surface = Color(red: 0.085, green: 0.10, blue: 0.13)
-    static let accent = Color(red: 0.70, green: 0.92, blue: 0.66)
+    static let background = Color.black
+    static let surface = Color(red: 0.105, green: 0.105, blue: 0.115)
+    static let accent = Color(red: 0.98, green: 0.18, blue: 0.27)
     static let secondary = Color.white.opacity(0.58)
 }
 
@@ -38,7 +38,7 @@ struct SectionHeading: View {
     var trailing: String? = nil
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(title).font(.system(size: 22, weight: .bold, design: .rounded))
+        Text(title).font(.system(size: 21, weight: .bold))
             Spacer()
             if let trailing { Text(trailing).font(.caption.weight(.semibold)).foregroundStyle(MusiTheme.secondary) }
         }

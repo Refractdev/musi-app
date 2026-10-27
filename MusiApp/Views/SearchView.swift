@@ -1,5 +1,12 @@
 import SwiftUI
 
+private struct SearchCategory: Identifiable {
+    let title: String
+    let term: String
+    let color: Color
+    var id: String { title }
+}
+
 struct SearchView: View {
     @EnvironmentObject private var search: SearchViewModel
     @EnvironmentObject private var library: LibraryViewModel
@@ -7,17 +14,25 @@ struct SearchView: View {
     @State private var showingPlayer = false
     @State private var selectedTrack: MusicTrack?
 
+    private let categories = [
+        SearchCategory(title: "Pop", term: "pop", color: Color(red: 0.76, green: 0.08, blue: 0.19)),
+        SearchCategory(title: "Hip-Hop", term: "hip hop", color: Color(red: 0.38, green: 0.12, blue: 0.48)),
+        SearchCategory(title: "Rock", term: "rock", color: Color(red: 0.12, green: 0.27, blue: 0.49)),
+        SearchCategory(title: "R&B", term: "r&b", color: Color(red: 0.69, green: 0.27, blue: 0.10))
+    ]
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("FIND YOUR NEXT FAVORITE").font(.system(size: 10, weight: .bold)).tracking(2).foregroundStyle(MusiTheme.accent)
-                    Text("Search").font(.system(size: 34, weight: .bold, design: .rounded))
-                }.frame(maxWidth: .infinity, alignment: .leading).padding(.top, 14)
+                Text("Search")
+                    .font(.system(size: 34, weight: .bold))
+                    .tracking(-0.7)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 10)
 
                 HStack(spacing: 10) {
-                    Image(systemName: "magnifyingglass").foregroundStyle(MusiTheme.secondary)
-                    TextField("Songs, artists, albums", text: $search.query)
+                    Image(systemName: "magnifyingglass").foregroundStyle(.white.opacity(0.62))
+                    TextField("Artists, songs, albums", text: $search.query)
                         .textInputAutocapitalization(.never).autocorrectionDisabled()
                         .submitLabel(.search)
                     if !search.query.isEmpty {
@@ -25,12 +40,47 @@ struct SearchView: View {
                             .accessibilityLabel("Clear search")
                     }
                 }
-                .padding(15).background(.white.opacity(0.07), in: RoundedRectangle(cornerRadius: 16))
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(.white.opacity(0.07), lineWidth: 1))
+                .padding(.horizontal, 13).padding(.vertical, 12)
+                .background(Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 13, style: .continuous))
 
                 if search.query.isEmpty {
-                    ContentUnavailableView("Search music", systemImage: "waveform", description: Text("Search the iTunes Store catalog. Results show whether playback is a preview, a local file, or unavailable."))
-                        .padding(.top, 26)
+                    VStack(alignment: .leading, spacing: 14) {
+                        Text("Browse Categories")
+                            .font(.system(size: 21, weight: .bold))
+                            .tracking(-0.3)
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 11) {
+                            ForEach(categories) { category in
+                                Button { search.query = category.term } label: {
+                                    HStack {
+                                        Text(category.title).font(.system(size: 16, weight: .bold))
+                                        Spacer()
+                                        Image(systemName: "arrow.up.right")
+                                            .font(.system(size: 12, weight: .bold))
+                                            .foregroundStyle(.white.opacity(0.78))
+                                    }
+                                    .foregroundStyle(.white)
+                                    .padding(14)
+                                    .frame(maxWidth: .infinity, minHeight: 76)
+                                    .background {
+                                        ZStack(alignment: .trailing) {
+                                            LinearGradient(colors: [category.color, category.color.opacity(0.72)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                            Image(systemName: "music.note")
+                                                .font(.system(size: 50, weight: .ultraLight))
+                                                .foregroundStyle(.white.opacity(0.12))
+                                                .offset(x: 6, y: 13)
+                                        }
+                                        .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
+                                    }
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                        Text("Searches use the iTunes Store catalog. Preview clips are short promotional audio, not full songs.")
+                            .font(.system(size: 12))
+                            .foregroundStyle(MusiTheme.secondary)
+                            .padding(.top, 2)
+                    }
+                    .padding(.top, 9)
                 } else if search.isSearching && search.tracks.isEmpty {
                     ProgressView("Searching music…").frame(maxWidth: .infinity).padding(.top, 32)
                 } else if !search.tracks.isEmpty {
