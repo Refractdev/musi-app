@@ -25,8 +25,22 @@ jobs:
           -project MusiApp.xcodeproj
           -scheme MusiApp
           -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5'
+          -derivedDataPath "$RUNNER_TEMP/MusiApp-DerivedData"
           -resultBundlePath "$RUNNER_TEMP/MusiApp.xcresult"
           CODE_SIGNING_ALLOWED=NO
+
+      - name: Package iOS Simulator app
+        run: |
+          APP_PATH="$RUNNER_TEMP/MusiApp-DerivedData/Build/Products/Debug-iphonesimulator/MusiApp.app"
+          test -d "$APP_PATH"
+          ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "$RUNNER_TEMP/MusiApp-Simulator.zip"
+
+      - name: Upload iOS Simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: MusiApp-Simulator-app
+          path: ${{ runner.temp }}/MusiApp-Simulator.zip
+          if-no-files-found: error
 
       - name: Upload Xcode test results
         if: always()
