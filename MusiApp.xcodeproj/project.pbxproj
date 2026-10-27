@@ -1,0 +1,92 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+		000000000000000000000001 = {isa = PBXBuildFile; fileRef = 000000000000000000000101; };
+		000000000000000000000002 = {isa = PBXBuildFile; fileRef = 000000000000000000000102; };
+		000000000000000000000003 = {isa = PBXBuildFile; fileRef = 000000000000000000000103; };
+		000000000000000000000004 = {isa = PBXBuildFile; fileRef = 000000000000000000000104; };
+		000000000000000000000005 = {isa = PBXBuildFile; fileRef = 000000000000000000000105; };
+		000000000000000000000006 = {isa = PBXBuildFile; fileRef = 000000000000000000000106; };
+		000000000000000000000007 = {isa = PBXBuildFile; fileRef = 000000000000000000000107; };
+		000000000000000000000008 = {isa = PBXBuildFile; fileRef = 000000000000000000000108; };
+		000000000000000000000009 = {isa = PBXBuildFile; fileRef = 000000000000000000000109; };
+		00000000000000000000000A = {isa = PBXBuildFile; fileRef = 00000000000000000000010A; };
+		00000000000000000000000B = {isa = PBXBuildFile; fileRef = 00000000000000000000010B; };
+		00000000000000000000000C = {isa = PBXBuildFile; fileRef = 00000000000000000000010C; };
+		00000000000000000000000D = {isa = PBXBuildFile; fileRef = 00000000000000000000010D; };
+		00000000000000000000000E = {isa = PBXBuildFile; fileRef = 00000000000000000000010E; };
+		00000000000000000000000F = {isa = PBXBuildFile; fileRef = 00000000000000000000010F; };
+		000000000000000000000010 = {isa = PBXBuildFile; fileRef = 000000000000000000000110; };
+		000000000000000000000011 = {isa = PBXBuildFile; fileRef = 000000000000000000000111; };
+		000000000000000000000012 = {isa = PBXBuildFile; fileRef = 000000000000000000000112; };
+		000000000000000000000013 = {isa = PBXBuildFile; fileRef = 000000000000000000000113; };
+		000000000000000000000014 = {isa = PBXBuildFile; fileRef = 000000000000000000000114; };
+		000000000000000000000015 = {isa = PBXBuildFile; fileRef = 000000000000000000000115; };
+
+		000000000000000000000101 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiAppApp.swift; sourceTree = "<group>"; };
+		000000000000000000000102 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		000000000000000000000103 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
+		000000000000000000000104 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
+		000000000000000000000105 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchProvider.swift; sourceTree = "<group>"; };
+		000000000000000000000106 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhariyaMusicProvider.swift; sourceTree = "<group>"; };
+		000000000000000000000107 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000108 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStore.swift; sourceTree = "<group>"; };
+		000000000000000000000109 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		00000000000000000000010A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
+		00000000000000000000010B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueState.swift; sourceTree = "<group>"; };
+		00000000000000000000010C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShell.swift; sourceTree = "<group>"; };
+		00000000000000000000010D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00000000000000000000010E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		00000000000000000000010F = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		000000000000000000000110 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
+		000000000000000000000111 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
+		000000000000000000000112 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		000000000000000000000113 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiAppTests.swift; sourceTree = "<group>"; };
+		000000000000000000000114 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000115 = {isa = PBXFileReference; lastKnownFileType = image.png; path = ListenOnAppleMusic.png; sourceTree = "<group>"; };
+		000000000000000000000121 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000122 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		000000000000000000000201 = {isa = PBXGroup; children = (000000000000000000000101, 000000000000000000000202, 000000000000000000000203, 000000000000000000000204, 000000000000000000000205, 000000000000000000000206, 000000000000000000000207, 000000000000000000000208, 000000000000000000000209, 000000000000000000000212, ); path = MusiApp; sourceTree = "<group>"; };
+		000000000000000000000202 = {isa = PBXGroup; children = (000000000000000000000102, ); path = DesignSystem; sourceTree = "<group>"; };
+		000000000000000000000203 = {isa = PBXGroup; children = (000000000000000000000103, ); path = Models; sourceTree = "<group>"; };
+		000000000000000000000204 = {isa = PBXGroup; children = (000000000000000000000104, 000000000000000000000105, 000000000000000000000106, ); path = Providers; sourceTree = "<group>"; };
+		000000000000000000000205 = {isa = PBXGroup; children = (000000000000000000000107, ); path = Search; sourceTree = "<group>"; };
+		000000000000000000000206 = {isa = PBXGroup; children = (000000000000000000000108, ); path = Persistence; sourceTree = "<group>"; };
+		000000000000000000000208 = {isa = PBXGroup; children = (000000000000000000000109, ); path = Library; sourceTree = "<group>"; };
+		000000000000000000000209 = {isa = PBXGroup; children = (00000000000000000000010A, 00000000000000000000010B, ); path = Playback; sourceTree = "<group>"; };
+		000000000000000000000207 = {isa = PBXGroup; children = (00000000000000000000010C, 00000000000000000000010D, 00000000000000000000010E, 00000000000000000000010F, 000000000000000000000110, 000000000000000000000111, 000000000000000000000112, ); path = Views; sourceTree = "<group>"; };
+		000000000000000000000210 = {isa = PBXGroup; children = (000000000000000000000113, ); path = MusiAppTests; sourceTree = "<group>"; };
+		000000000000000000000212 = {isa = PBXGroup; children = (000000000000000000000115, ); path = Resources; sourceTree = "<group>"; };
+		000000000000000000000211 = {isa = PBXGroup; children = (000000000000000000000201, 000000000000000000000210, 000000000000000000000114, 000000000000000000000220, ); sourceTree = "<group>"; };
+		000000000000000000000220 = {isa = PBXGroup; children = (000000000000000000000121, 000000000000000000000122, ); name = Products; sourceTree = "<group>"; };
+
+		000000000000000000000301 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000001, 000000000000000000000002, 000000000000000000000003, 000000000000000000000004, 000000000000000000000005, 000000000000000000000006, 000000000000000000000007, 000000000000000000000008, 000000000000000000000009, 00000000000000000000000A, 00000000000000000000000B, 00000000000000000000000C, 00000000000000000000000D, 00000000000000000000000E, 00000000000000000000000F, 000000000000000000000010, 000000000000000000000011, 000000000000000000000012, ); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000302 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000303 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000015, ); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000304 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000013, ); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000305 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000306 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+
+		000000000000000000000401 = {isa = PBXContainerItemProxy; containerPortal = 000000000000000000000501; proxyType = 1; remoteGlobalIDString = 000000000000000000000503; remoteInfo = MusiApp; };
+		000000000000000000000402 = {isa = PBXTargetDependency; target = 000000000000000000000503; targetProxy = 000000000000000000000401; };
+		000000000000000000000501 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {000000000000000000000503 = {CreatedOnToolsVersion = 16.0; }; 000000000000000000000504 = {CreatedOnToolsVersion = 16.0; TestTargetID = 000000000000000000000503; }; }; }; buildConfigurationList = 000000000000000000000601; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, ); mainGroup = 000000000000000000000211; productRefGroup = 000000000000000000000220; projectDirPath = ""; projectRoot = ""; targets = (000000000000000000000503, 000000000000000000000504, ); };
+		000000000000000000000503 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000602; buildPhases = (000000000000000000000301, 000000000000000000000302, 000000000000000000000303, ); buildRules = (); dependencies = (); name = MusiApp; productName = MusiApp; productReference = 000000000000000000000121; productType = "com.apple.product-type.application"; };
+		000000000000000000000504 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000603; buildPhases = (000000000000000000000304, 000000000000000000000305, 000000000000000000000306, ); buildRules = (); dependencies = (000000000000000000000402, ); name = MusiAppTests; productName = MusiAppTests; productReference = 000000000000000000000122; productType = "com.apple.product-type.bundle.unit-test"; };
+
+		000000000000000000000601 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000701, 000000000000000000000702, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000602 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000703, 000000000000000000000704, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000603 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000705, 000000000000000000000706, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000701 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000702 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		000000000000000000000703 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; ENABLE_TESTABILITY = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.musiapp; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		000000000000000000000704 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.musiapp; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+		000000000000000000000705 = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.musiapp.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusiApp.app/MusiApp"; }; name = Debug; };
+		000000000000000000000706 = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.musiapp.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusiApp.app/MusiApp"; }; name = Release; };
+	};
+	rootObject = 000000000000000000000501;
+}
