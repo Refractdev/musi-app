@@ -1,0 +1,37 @@
+name: iOS build and tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build and run unit tests in iOS Simulator
+        run: >-
+          xcodebuild test
+          -project MusiApp.xcodeproj
+          -scheme MusiApp
+          -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5'
+          -resultBundlePath "$RUNNER_TEMP/MusiApp.xcresult"
+          CODE_SIGNING_ALLOWED=NO
+
+      - name: Upload Xcode test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MusiApp-xcode-results
+          path: ${{ runner.temp }}/MusiApp.xcresult
+          if-no-files-found: ignore
